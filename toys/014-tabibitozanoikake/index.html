@@ -1,61 +1,248 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#fffaf0">
-  <title>ただいま準備中です｜知的玩具工房</title>
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      min-height: 100vh;
-      overflow-x: hidden;
-      color: #25313c;
-      background:
-        radial-gradient(circle at 10% 8%, #fff1b9 0 7%, transparent 7.2%),
-        linear-gradient(180deg, #fffaf0 0%, #f4fbf8 100%);
-      font-family: "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
-    }
-    main {
-      width: min(680px, calc(100% - 28px));
-      min-height: 100vh;
-      margin: 0 auto;
-      padding: 28px 0;
-      display: grid;
-      place-items: center;
-    }
-    .back {
-      display: inline-block;
-      color: #52616b;
-      font-size: .9rem;
-      text-decoration: none;
-      margin-top: 24px;
-    }
-    .back:hover { text-decoration: underline; }
-    .card {
-      padding: clamp(36px, 8vw, 64px) 24px;
-      border: 1px solid rgba(222,216,202,.85);
-      border-radius: 24px;
-      background: rgba(255,255,255,.9);
-      box-shadow: 0 12px 34px rgba(48,68,61,.08);
-      text-align: center;
-    }
-    h1 {
-      margin: 0;
-      color: #ed6a5a;
-      font-size: clamp(1.6rem, 7vw, 2.5rem);
-      line-height: 1.35;
-      font-weight: 700;
-    }
-  </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HDPEGE2X1P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HDPEGE2X1P');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#fffaf0">
+<title>#014 旅人算・追いかけ｜知的玩具工房</title>
+<link rel="canonical" href="https://sakurak02.github.io/intellectual-toys/toys/014-tabibitozanoikake/">
+<style>
+:root{
+  --ink:#25313c;--muted:#65727d;--paper:#fffdf8;--cream:#fff6dc;
+  --rabbit:#ed6a5a;--sun:#f7c948;--line:#ded8ca;--blue:#4f8fcf;
+  --soft-blue:#dcecff;--green:#2e9d70;--purple:#7866c9;--track:#eef2ee;
+}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);background:radial-gradient(circle at 10% 8%,#fff1b9 0 7%,transparent 7.2%),linear-gradient(180deg,#fffaf0 0%,#f4fbf8 100%);font-family:"Hiragino Sans","Yu Gothic",system-ui,sans-serif;line-height:1.6}
+a{color:inherit}.page{width:min(920px,calc(100% - 28px));margin:0 auto;padding:20px 0 42px}
+.back{display:inline-flex;gap:.4em;align-items:center;color:#52616b;font-size:.9rem;text-decoration:none}.back:hover{text-decoration:underline}
+header{padding:24px 4px 20px}.category-label{margin:0 0 2px;color:var(--muted);font-size:.72rem;font-weight:700;letter-spacing:.12em}
+.number{margin:0 0 3px;color:var(--rabbit);font-size:.8rem;font-weight:800;letter-spacing:.14em}
+h1{margin:0;font-size:clamp(2rem,8vw,3.6rem);line-height:1.15;letter-spacing:.03em}.lead{margin:10px 0 0;font-size:clamp(1rem,3.5vw,1.25rem);font-weight:700}
+.card{background:rgba(255,255,255,.92);border:1px solid rgba(222,216,202,.85);border-radius:24px;box-shadow:0 12px 34px rgba(48,68,61,.08);margin-bottom:18px}
+h2{margin:0;font-size:1.08rem}.intro{padding:22px 20px}.rule-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.rule{padding:13px;border-radius:15px;background:var(--cream);border:1px dashed var(--line);text-align:center;font-weight:850;font-size:.85rem}.rule strong{display:block;color:var(--rabbit);font-size:1.05rem}
+.intro>p:last-child{margin:14px 0 0;color:var(--muted);font-size:.95rem}
+.playground{padding:20px}.problem-box{background:#f8f6ef;border-radius:16px;padding:14px 16px;font-size:.95rem;margin-bottom:16px}.problem-box b{color:var(--rabbit)}
+.explain{margin:12px 0;padding:14px 16px;border-radius:16px;background:#f8f6ef;font-size:.92rem}.big-idea,.eq{color:var(--rabbit);font-weight:950}.eq{font-size:1.08rem;margin:7px 0}
+.actions{display:flex;justify-content:center;gap:10px;padding:16px 0 0;flex-wrap:wrap}button{border:0;border-radius:999px;padding:11px 24px;color:#fff;background:var(--ink);font:inherit;font-weight:800;cursor:pointer;box-shadow:0 5px 0 #111b23}button:active{transform:translateY(3px);box-shadow:0 2px 0 #111b23}button.secondary{color:var(--ink);background:#ece8de;box-shadow:0 5px 0 #d1cabc}button:disabled{opacity:.45;cursor:default}
+.toy{margin:16px auto 0;padding:18px 14px;border-radius:20px;background:#fff9e8;border:2px solid var(--sun)}.toy-title{text-align:center;font-weight:950;margin-bottom:12px}
+.distance-label{display:flex;justify-content:center;align-items:center;gap:8px;margin-bottom:8px;font-weight:900}.distance-label span{color:var(--rabbit);font-size:1.1rem}
+.road-wrap{position:relative;padding:46px 20px 58px}.road{position:relative;height:18px;border-radius:999px;background:#d7d3c8;border:3px solid var(--ink)}
+.road::after{content:"";position:absolute;left:0;right:0;top:50%;border-top:2px dashed #fff;transform:translateY(-50%)}
+.traveler{position:absolute;top:0;width:66px;text-align:center;transform:translateX(-50%);transition:left .45s ease}.traveler.right{transform:translateX(-50%)}
+.person{width:42px;height:42px;margin:0 auto;border-radius:50%;display:grid;place-items:center;font-size:1.5rem;border:2px solid var(--ink);background:#fff}
+.traveler.left .person{background:#dcecff}.traveler.right .person{background:#f0e7ff}.traveler b{position:absolute;top:62px;left:50%;transform:translateX(-50%);display:block;font-size:.76rem;white-space:nowrap}.traveler small{position:absolute;top:79px;left:50%;transform:translateX(-50%);display:block;color:var(--muted);font-size:.67rem;font-weight:800;white-space:nowrap}
+.meet-mark{position:absolute;top:38px;bottom:52px;width:3px;background:var(--rabbit);left:90%;opacity:.25}.meet-mark::before{content:"追いつく場所";position:absolute;top:-26px;left:50%;transform:translateX(-50%);font-size:.7rem;color:var(--rabbit);font-weight:900;white-space:nowrap}
+.gap-info{text-align:center;margin-top:10px;font-weight:850;color:var(--muted)}.gap-info b{color:var(--rabbit)}
+.progress-dots{display:flex;justify-content:center;gap:6px;margin-top:12px}.progress-dots span{width:10px;height:10px;border-radius:50%;background:#ddd5c5}.progress-dots span.on{background:var(--rabbit)}
+.toy-result{display:none;margin-top:14px;padding:14px;border-radius:15px;background:var(--cream);text-align:center;font-weight:900}.toy-result.show{display:block}.toy-result .formula{color:var(--rabbit);font-size:1.08rem;margin:3px 0}
+.summary{display:none;margin-top:18px;padding:18px;border-radius:18px;background:#f4fbf8;border:2px solid #bcdcca}.summary.show{display:block}.summary h3{text-align:center;margin:0 0 10px}.summary p{margin:6px 0;text-align:center;font-weight:850}.summary .main-formula{color:var(--rabbit);font-size:1.08rem;font-weight:950}
+.challenge{padding:24px}.challenge>h2{margin:0 0 12px;color:var(--rabbit);font-size:clamp(1.35rem,5vw,1.9rem);text-align:center}.challenge>p{text-align:center;margin:8px 0;font-weight:700}.collection-note{color:var(--ink)}.hint{color:var(--muted);font-weight:500!important}
+.challenge-item{border:1px solid var(--line);border-radius:18px;background:#fff;padding:16px;margin-top:18px}.challenge-item h3{margin:0 0 8px;font-size:1rem}.challenge-item p{margin:4px 0;font-weight:700}.challenge-answer{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:12px}.challenge-answer label{font-size:.82rem;color:var(--muted);font-weight:800}.challenge-answer input{width:120px;min-height:44px;border:2px solid var(--line);border-radius:999px;padding:8px 14px;font:inherit;font-weight:850;text-align:center}.unit{font-weight:900}.diagram-toggle{margin-left:auto;padding:8px 15px;font-size:.82rem;color:var(--ink);background:#ece8de;box-shadow:0 4px 0 #d1cabc}
+.challenge-diagram{display:none;margin-top:14px}.challenge-diagram.show{display:block}.mini-diagram{padding:15px;border-radius:16px;background:#fff9e8;border:2px solid var(--sun)}
+.mini-road{position:relative;height:14px;margin:48px 20px 28px;border-radius:999px;background:#d7d3c8;border:3px solid var(--ink)}.mini-road::after{content:"";position:absolute;left:0;right:0;top:50%;border-top:2px dashed #fff;transform:translateY(-50%)}
+.mini-person{position:absolute;top:-43px;transform:translateX(-50%);text-align:center;font-size:1.25rem}.mini-person b{display:block;font-size:.68rem;white-space:nowrap}.mini-meet{position:absolute;left:66.666%;top:-34px;height:76px;border-left:3px solid var(--rabbit)}.mini-meet span{position:absolute;top:-20px;left:50%;transform:translateX(-50%);font-size:.68rem;color:var(--rabbit);font-weight:900;white-space:nowrap}
+.challenge-meet-mark{left:90%}
+.challenge-message{min-height:1.6em;margin-top:14px;color:var(--rabbit);font-weight:800;text-align:center}
+.reward{display:none;margin-top:18px;padding:18px;border-radius:18px;background:var(--cream);text-align:center}.reward.show{display:block}.reward .sparkles{margin:2px 0;font-size:1.4rem;letter-spacing:.2em}.reward .animal{display:block;width:110px;height:80px;object-fit:contain;margin:4px auto}.reward-links{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:14px}.reward-links a{display:inline-block;padding:10px 18px;border:1px solid var(--line);border-radius:999px;text-decoration:none;background:#fff;font-weight:800;color:var(--ink)}
+.feedback{padding:25px;text-align:center}.feedback p{margin:0 0 10px;font-weight:700}.feedback a{display:inline-block;padding:8px 18px;border:1px solid var(--line);border-radius:999px;text-decoration:none;background:#fff}
+.mascot-dock{position:fixed;right:16px;bottom:16px;z-index:50;display:flex;align-items:flex-end;gap:10px;max-width:calc(100vw - 20px)}.speech{background:#fff;border:1px solid var(--line);border-radius:16px;padding:10px 14px;font-size:.8rem;font-weight:700;box-shadow:0 8px 20px rgba(48,68,61,.12);position:relative;max-width:280px;white-space:pre}.speech::after{content:"";position:absolute;right:-8px;bottom:14px;border:8px solid transparent;border-left-color:#fff}.mascot{width:58px;height:58px;flex-shrink:0;filter:drop-shadow(0 6px 8px rgba(48,68,61,.25))}.mascot.bounce{animation:bounce .5s ease}@keyframes bounce{0%,100%{transform:translateY(0)}40%{transform:translateY(-9px)}70%{transform:translateY(2px)}}
+@media(max-width:650px){.page{width:min(100% - 18px,920px);padding-top:12px}.rule-grid{grid-template-columns:1fr}.challenge-answer{align-items:flex-end}.diagram-toggle{width:100%;margin-left:0}.mascot-dock{right:10px;bottom:10px}.mascot{width:48px;height:48px}.road-wrap{padding-left:7px;padding-right:7px}.traveler{width:58px}.traveler b{font-size:.68rem}}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.001ms!important;transition-duration:.001ms!important}}
+</style>
 </head>
 <body>
-  <main>
-    <section class="card">
-      <h1>ただいま準備中です</h1>
-      <a class="back" href="../../index.html">← 工房のトップへ</a>
-    </section>
-  </main>
+<main class="page">
+<a class="back" href="../../">← 工房のトップへ</a>
+<header>
+<p class="category-label">02 速さ</p>
+<p class="number">#014 旅人算・追いかけ</p>
+<h1>速さのちがいで おいつこう</h1>
+<p class="lead">同じ方向に進むときは、速さのちがいで距離がちぢみます。</p>
+</header>
+
+<section class="card intro">
+<h2>今日の大事な考え方</h2>
+<div class="rule-grid">
+<div class="rule">はなこさん<strong>毎分40m</strong></div>
+<div class="rule">たろうさん<strong>毎分90m</strong></div>
+<div class="rule">1分で近づく<strong>50m</strong></div>
+</div>
+<p>同じ方向に進むときは、ふたりの速さの差で考えましょう。</p>
+</section>
+
+<section class="card playground" aria-label="旅人算・追いかけの実験室">
+<h2>追いつくまでの時間を見つけよう</h2>
+<div class="problem-box">同じ地点から、はなこさんが先に出発しました。その<b>10分後</b>に、たろうさんがはなこさんを追いかけました。たろうさんは<b>毎分90m</b>、はなこさんは<b>毎分40m</b>で進みます。たろうさんは、出発してから何分後にはなこさんに追いつきますか。</div>
+<div class="explain">はなこさんは、たろうさんが出発するまでに400m先へ進んでいます。1分ごとに2人の間がどれだけちぢむか、動かして見てみましょう。</div>
+
+<div class="toy">
+<div class="toy-title">1分ずつ進めよう</div>
+<div class="distance-label">はじめの差 <span>400m</span></div>
+<div class="road-wrap">
+<div class="meet-mark" aria-hidden="true"></div>
+<div class="road"></div>
+<div class="traveler left" id="taro"><div class="person">👦</div><b>たろうさん</b><small>毎分90m</small></div>
+<div class="traveler right" id="hanako"><div class="person">👧</div><b>はなこさん</b><small>毎分40m</small></div>
+</div>
+<div class="gap-info" id="gapInfo">はなこさんは <b>400m</b> 先にいます。</div>
+<div class="progress-dots" id="progressDots" aria-label="経過した分数"></div>
+<div class="toy-result" id="exampleResult"></div>
+<div class="actions"><button type="button" id="advanceBtn">1分すすめる ▶</button><button type="button" class="secondary" id="resetBtn">もどす</button></div>
+</div>
+
+<div class="summary" id="summary">
+<h3>追いつくまでの時間</h3>
+<p class="main-formula">40×10＝400m</p>
+<p>はなこさんは、先に400m進んでいます。</p>
+<p class="main-formula">90−40＝50m</p>
+<p>1分間に、50mずつ差がちぢみます。</p>
+<p class="main-formula">400÷50＝8</p>
+<p>答え　<b>8分後</b></p>
+</div>
+</section>
+
+<section class="card challenge" aria-labelledby="challenge-title">
+<h2 id="challenge-title">🎁 チャレンジしてみよう！</h2>
+<p class="collection-note">せいかいすると、コレクションがふえるよ！</p>
+<p class="hint">まずは考えてみよう。わからないときは「線分図でたしかめる」で確認できます。</p>
+
+<article class="challenge-item">
+<h3>追いつくのは何分後？</h3>
+<p>同じ地点から、ゆいさんが先に出発しました。その6分後に、けんたさんがゆいさんを追いかけました。けんたさんは毎分100m、ゆいさんは毎分60mで進みます。けんたさんは、出発してから何分後にゆいさんに追いつきますか。</p>
+<div class="challenge-answer"><label for="answer">答え</label><input id="answer" type="text" inputmode="numeric" autocomplete="off"><span class="unit">分後</span><button type="button" class="diagram-toggle" id="diagramToggle">💡 線分図でたしかめる</button></div>
+<div class="challenge-diagram" id="challengeDiagram">
+<div class="mini-diagram">
+<div class="toy-title">1分ずつ進めよう</div>
+<div class="distance-label">はじめの差 <span>360m</span></div>
+<div class="road-wrap">
+<div class="meet-mark challenge-meet-mark" aria-hidden="true"></div>
+<div class="road"></div>
+<div class="traveler left" id="challengeKenta"><div class="person">👦</div><b>けんたさん</b><small>毎分100m</small></div>
+<div class="traveler right" id="challengeYui"><div class="person">👧</div><b>ゆいさん</b><small>毎分60m</small></div>
+</div>
+<div class="gap-info" id="challengeGapInfo">ゆいさんは <b>360m</b> 先にいます。</div>
+<div class="progress-dots" id="challengeProgressDots" aria-label="経過した分数"></div>
+<div class="toy-result" id="challengeToyResult"></div>
+<div class="actions"><button type="button" id="challengeAdvanceBtn">1分すすめる ▶</button><button type="button" class="secondary" id="challengeResetBtn">もどす</button></div>
+</div>
+</div>
+</article>
+
+<div class="actions"><button id="checkChallenge" type="button">こたえをみる</button></div>
+<p class="challenge-message" id="challengeMessage" aria-live="polite"></p>
+<div class="reward" id="challengeReward" aria-live="polite">
+<p>🎉 正解！</p><p class="sparkles">✨✨✨</p>
+<img id="result-animal" class="animal" src="../../assets/014.png" alt="クオッカ">
+<p>新しいコレクションがふえた！</p>
+<div class="reward-links">
+<a href="../../animal-book/index.html">📖 どうぶつ図鑑を見る</a>
+<a href="../015-oufukusuruhayasa/index.html" id="nextToyLink">➡ 次の知的玩具へ</a>
+</div>
+</div>
+</section>
+
+<section class="card feedback"><p>遊んでみてどうでしたか？</p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdDMNP37vNe0P2DGJ-g8AG2vuAKJLnY-Kpj2Z2N6Pct18heug/viewform">感想を送る</a></section>
+</main>
+
+<div class="mascot-dock"><div class="speech" id="speech">速さの差で近づくよ</div><div class="mascot" id="mascot"></div></div>
+<script>
+(() => {
+  const $ = s => document.querySelector(s);
+  function mascotSVG(state){
+    const ears=`<ellipse cx="27" cy="24" rx="12" ry="12" fill="#C79A6B"/><ellipse cx="73" cy="24" rx="12" ry="12" fill="#C79A6B"/><ellipse cx="27" cy="24" rx="6" ry="6" fill="#F2D3B3"/><ellipse cx="73" cy="24" rx="6" ry="6" fill="#F2D3B3"/>`;
+    const head=`<circle cx="50" cy="55" r="38" fill="#E8B98A"/>`; const cheeks=`<ellipse cx="28" cy="65" rx="7" ry="5" fill="#FFAFC0" opacity=".75"/><ellipse cx="72" cy="65" rx="7" ry="5" fill="#FFAFC0" opacity=".75"/>`; const muzzle=`<ellipse cx="50" cy="66" rx="15" ry="11" fill="#F7DFC2"/>`; let eyes,mouth,extra="";
+    if(state==='happy'){eyes=`<path d="M32 47 q6 -8 12 0" stroke="#25313c" stroke-width="3.4" fill="none" stroke-linecap="round"/><path d="M56 47 q6 -8 12 0" stroke="#25313c" stroke-width="3.4" fill="none" stroke-linecap="round"/>`;mouth=`<path d="M40 66 q10 12 20 0" stroke="#25313c" stroke-width="3" fill="none" stroke-linecap="round"/>`;extra=`<text x="14" y="20" font-size="14">✨</text>`;}else if(state==='thinking'){eyes=`<circle cx="37" cy="50" r="4" fill="#25313c"/><circle cx="63" cy="47" r="4" fill="#25313c"/>`;mouth=`<path d="M43 68 q7 3 14 0" stroke="#25313c" stroke-width="3" fill="none" stroke-linecap="round"/>`;}else{eyes=`<circle cx="37" cy="50" r="4.6" fill="#25313c"/><circle cx="63" cy="50" r="4.6" fill="#25313c"/><circle cx="38.6" cy="48.4" r="1.4" fill="#fff"/><circle cx="64.6" cy="48.4" r="1.4" fill="#fff"/>`;mouth=`<path d="M42 67 q8 6 16 0" stroke="#25313c" stroke-width="3" fill="none" stroke-linecap="round"/>`;}
+    return `<svg viewBox="0 0 100 100" width="100%" height="100%">${ears}${head}${cheeks}${muzzle}${eyes}${mouth}${extra}</svg>`;
+  }
+  const mascot=$('#mascot'),speech=$('#speech');
+  function setMascot(state,text){mascot.innerHTML=mascotSVG(state);if(text)speech.textContent=text;mascot.classList.remove('bounce');void mascot.offsetWidth;mascot.classList.add('bounce');}
+  setMascot('normal');
+
+  let minute=0;
+  const taro=$('#taro'),hanako=$('#hanako'),gapInfo=$('#gapInfo'),advanceBtn=$('#advanceBtn'),result=$('#exampleResult'),summary=$('#summary'),dots=$('#progressDots');
+  dots.innerHTML=Array.from({length:8},(_,i)=>`<span aria-label="${i+1}分"></span>`).join('');
+  function render(){
+    const taroPos=(90*minute/800)*100;
+    const hanakoPos=((400+40*minute)/800)*100;
+    const gap=Math.max(0,400-50*minute);
+    taro.style.left=`${taroPos}%`;
+    hanako.style.left=`${hanakoPos}%`;
+    dots.querySelectorAll('span').forEach((d,i)=>d.classList.toggle('on',i<minute));
+    if(minute===0) gapInfo.innerHTML='はなこさんは <b>400m</b> 先にいます。';
+    else if(minute<8) gapInfo.innerHTML=`${minute}分後：ふたりの間は <b>${gap}m</b>`;
+    else gapInfo.innerHTML='<b>8分後に追いつきました！</b>';
+    if(minute===8){
+      advanceBtn.disabled=true;
+      result.classList.add('show');
+      result.innerHTML='<div class="formula">90−40＝50</div>1分に50mずつ差がちぢむ<div class="formula">400÷50＝8</div><b>8分後に追いつく</b>';
+      summary.classList.add('show');
+      setMascot('happy','追いついた！');
+    }
+  }
+  advanceBtn.addEventListener('click',()=>{if(minute<8){minute++;render();if(minute<8)setMascot('normal',`${minute}分たったよ`);}});
+  $('#resetBtn').addEventListener('click',()=>{minute=0;advanceBtn.disabled=false;result.classList.remove('show');summary.classList.remove('show');render();setMascot('normal','もう1回！');});
+  render();
+
+  $('#diagramToggle').addEventListener('click',()=>{
+    const panel=$('#challengeDiagram');
+    const open=panel.classList.toggle('show');
+    $('#diagramToggle').textContent=open?'💡 線分図をかくす':'💡 線分図でたしかめる';
+    if(open){panel.scrollIntoView({behavior:'smooth',block:'center'});setMascot('normal','速さの差を見よう');}
+  });
+
+  let challengeMinute=0;
+  const challengeKenta=$('#challengeKenta'),challengeYui=$('#challengeYui'),challengeGapInfo=$('#challengeGapInfo');
+  const challengeAdvanceBtn=$('#challengeAdvanceBtn'),challengeToyResult=$('#challengeToyResult'),challengeDots=$('#challengeProgressDots');
+  challengeDots.innerHTML=Array.from({length:9},(_,i)=>`<span aria-label="${i+1}分"></span>`).join('');
+  function renderChallenge(){
+    const kentaPos=(100*challengeMinute/1000)*100;
+    const yuiPos=((360+60*challengeMinute)/1000)*100;
+    const gap=Math.max(0,360-40*challengeMinute);
+    challengeKenta.style.left=`${kentaPos}%`;
+    challengeYui.style.left=`${yuiPos}%`;
+    challengeDots.querySelectorAll('span').forEach((d,i)=>d.classList.toggle('on',i<challengeMinute));
+    if(challengeMinute===0) challengeGapInfo.innerHTML='ゆいさんは <b>360m</b> 先にいます。';
+    else if(challengeMinute<9) challengeGapInfo.innerHTML=`${challengeMinute}分後：ふたりの間は <b>${gap}m</b>`;
+    else challengeGapInfo.innerHTML='<b>9分後に追いつきました！</b>';
+    if(challengeMinute===9){
+      challengeAdvanceBtn.disabled=true;
+      challengeToyResult.classList.add('show');
+      challengeToyResult.innerHTML='<div class="formula">100−60＝40</div>1分に40mずつ差がちぢむ<div class="formula">360÷40＝9</div><b>9分後に追いつく</b>';
+      setMascot('happy','追いついた！');
+    }
+  }
+  challengeAdvanceBtn.addEventListener('click',()=>{if(challengeMinute<9){challengeMinute++;renderChallenge();if(challengeMinute<9)setMascot('normal',`${challengeMinute}分たったよ`);}});
+  $('#challengeResetBtn').addEventListener('click',()=>{challengeMinute=0;challengeAdvanceBtn.disabled=false;challengeToyResult.classList.remove('show');challengeToyResult.innerHTML='';renderChallenge();setMascot('normal','もう1回！');});
+  renderChallenge();
+
+  const normalize=v=>v.replace(/[０-９]/g,c=>String.fromCharCode(c.charCodeAt(0)-0xFEE0)).replace(/分後|分|\s/gi,'').replace(/\D/g,'');
+  const animalId='014';
+  $('#checkChallenge').addEventListener('click',()=>{
+    const a=normalize($('#answer').value);
+    const correct=a!==''&&Number(a)===9;
+    if(correct){
+      const storageKey='intellectualToysAnimalBook.v1';const legacy=['intellectualToysAnimalBook','animalBook','animalCollection','intellectualToysAnimals'];
+      const norm=v=>Array.isArray(v)?v.map(String):(v&&typeof v==='object'?Object.keys(v).filter(id=>v[id]):[]);
+      const read=k=>{try{const raw=localStorage.getItem(k);return raw?norm(JSON.parse(raw)):[]}catch(e){return[]}};
+      const acquired=new Set(read(storageKey));legacy.forEach(k=>read(k).forEach(id=>acquired.add(id)));acquired.add(animalId);
+      try{localStorage.setItem(storageKey,JSON.stringify([...acquired].sort()))}catch(e){}
+      $('#challengeMessage').textContent='';$('#challengeReward').classList.add('show');setMascot('happy','やったね！\n新しいコレクションがふえたよ！');
+    }else{
+      $('#challengeReward').classList.remove('show');$('#challengeMessage').textContent='もう一度考えてみよう。「線分図でたしかめる」も使えます。';setMascot('thinking','あと少し！');
+    }
+  });
+  $('#result-animal').src=`../../assets/${animalId}.png`;
+})();
+</script>
 </body>
 </html>
