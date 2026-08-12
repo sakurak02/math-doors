@@ -1,308 +1,67 @@
 <!doctype html>
 <html lang="ja">
 <head>
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HDPEGE2X1P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-HDPEGE2X1P');
-</script>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#fffaf0">
-  <title>どうぶつ図鑑｜知的玩具工房</title>
-  <link rel="canonical" href="https://sakurak02.github.io/intellectual-toys/animal-book/">
-  <style>
-    :root {
-      --ink: #25313c;
-      --muted: #65727d;
-      --paper: #fffdf8;
-      --cream: #fff6dc;
-      --line: #ded8ca;
-      --sun: #f7c948;
-      --rabbit: #ed6a5a;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      color: var(--ink);
-      background:
-        radial-gradient(circle at 10% 8%, #fff1b9 0 7%, transparent 7.2%),
-        linear-gradient(180deg, #fffaf0 0%, #f4fbf8 100%);
-      font-family: "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
-      line-height: 1.7;
-    }
-    .page {
-      width: min(920px, calc(100% - 28px));
-      margin: 0 auto;
-      padding: 20px 0 48px;
-    }
-    .back {
-      display: inline-flex;
-      gap: .4em;
-      align-items: center;
-      color: #52616b;
-      font-size: .9rem;
-      text-decoration: none;
-    }
-    .back:hover { text-decoration: underline; }
-    header {
-      padding: 24px 4px 18px;
-      text-align: center;
-    }
-    h1 {
-      margin: 0;
-      font-size: clamp(2rem, 8vw, 3.4rem);
-      line-height: 1.15;
-      letter-spacing: .03em;
-    }
-    .lead {
-      margin: 12px auto 0;
-      max-width: 620px;
-      color: var(--muted);
-      font-weight: 700;
-    }
-    .counter {
-      width: fit-content;
-      margin: 18px auto 0;
-      padding: 7px 18px;
-      border-radius: 999px;
-      background: var(--cream);
-      color: #714b0c;
-      font-size: 1.35rem;
-      font-weight: 900;
-      font-variant-numeric: tabular-nums;
-    }
-    .card {
-      margin-top: 18px;
-      padding: 22px;
-      border: 1px solid rgba(222,216,202,.85);
-      border-radius: 24px;
-      background: rgba(255,255,255,.9);
-      box-shadow: 0 12px 34px rgba(48,68,61,.08);
-    }
-    .book-grid {
-      display: grid;
-      grid-template-columns: repeat(10, 1fr);
-      gap: 8px;
-    }
-    .animal-cell {
-      min-width: 0;
-      width: 100%;
-      height: 96px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 2px;
-      border: 1px solid #e4ddcf;
-      border-radius: 12px;
-      background: #fffefa;
-    }
-    .animal-cell.acquired {
-      border-color: #dca94b;
-      background: linear-gradient(180deg, #fff8df 0%, #ffedb8 100%);
-      box-shadow: 0 4px 10px rgba(128,88,20,.16), inset 0 0 0 2px rgba(255,255,255,.55);
-    }
-    .animal {
-      font-size: clamp(1.3rem, 4vw, 2rem);
-      line-height: 1;
-    }
-    .animal-image {
-      display: block;
-      width: 70%;
-      height: auto;
-      max-height: 70px;
-      object-fit: contain;
-      min-height: 0;
-    }
-    .placeholder {
-      color: #d5ccba;
-      font-size: clamp(1.2rem, 3.6vw, 1.8rem);
-      line-height: 1;
-    }
-    .animal-number {
-      margin-top: 4px;
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: 800;
-      font-variant-numeric: tabular-nums;
-    }
-    .animal-cell.acquired .animal-number {
-      color: #714b0c;
-    }
-    .notice {
-      margin: 18px auto 0;
-      max-width: 680px;
-      color: var(--muted);
-      font-size: .82rem;
-      text-align: center;
-    }
-    .message-card {
-      max-width: 680px;
-      margin: 18px auto 0;
-      padding: 18px 20px;
-      border: 1px solid #ead7ad;
-      border-left: 6px solid var(--sun);
-      border-radius: 18px;
-      background: rgba(255,246,220,.9);
-      box-shadow: 0 8px 22px rgba(128,88,20,.08);
-      text-align: center;
-      font-weight: 800;
-    }
-    @media (max-width: 650px) {
-      .page { width: min(100% - 18px, 920px); padding-top: 12px; }
-      header { padding-top: 18px; }
-      .card { padding: 12px; border-radius: 18px; }
-      .book-grid { grid-template-columns: repeat(5, 1fr); gap: 7px; }
-      .animal-cell { border-radius: 10px; }
-      .animal-number { font-size: .66rem; }
-      .message-card { padding: 15px 14px; border-left-width: 4px; }
-    }
-  </style>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-HDPEGE2X1P');</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>コレクション図鑑｜数学の扉</title>
+<link rel="canonical" href="https://sakurak02.github.io/intellectual-toys/animal-book/">
+<link rel="stylesheet" href="../css/site.css">
+<style>
+.shelf{margin-top:28px;padding:20px;border:1px solid var(--line);border-radius:20px;background:white}
+.shelf-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-bottom:14px}.shelf-head h2{margin:0}.progress{color:#7b5b20;font-weight:800}
+.book-grid{display:grid;grid-template-columns:repeat(10,1fr);gap:8px}
+.item-cell{min-width:0;height:94px;display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px solid #e4ddcf;border-radius:12px;background:#fffefa}
+.item-cell.acquired{border-color:#dca94b;background:#fff1c9}
+.item-image{display:block;width:72%;height:64px;object-fit:contain}.placeholder{font-size:1.45rem;color:#d5ccba}.num{font-size:.72rem;color:#7a7f84;font-weight:800}
+@media(max-width:650px){.book-grid{grid-template-columns:repeat(5,1fr);gap:7px}.shelf{padding:12px}.item-cell{height:88px}}
+</style>
 </head>
 <body>
-  <main class="page">
-    <a class="back" href="../">← トップページへ</a>
-    <header>
-      <h1>📖 コレクション図鑑</h1>
-      <p class="lead">
-        知的玩具で遊んでチャレンジに正解すると、<br>
-        コレクションが少しずつ増えていきます。
-      </p>
-      <p class="lead">いろいろなコレクションを集めてみよう！</p>
-      <div class="counter" id="progress">0 / 100</div>
-    </header>
+<main class="page">
+  <a class="back" href="../">← 数学の扉へ</a>
+  <header class="site-header">
+    <h1>📖 コレクション図鑑</h1>
+    <p class="tagline">扉のチャレンジに正解すると、少しずつ仲間が増えていきます。</p>
+  </header>
 
-    <section class="card" aria-label="どうぶつ図鑑の100マス">
-      <div class="book-grid" id="bookGrid"></div>
-    </section>
+  <section class="shelf" aria-labelledby="animal-title">
+    <div class="shelf-head"><h2 id="animal-title">どうぶつ図鑑</h2><div class="progress" id="animalProgress">0 / 50</div></div>
+    <div class="book-grid" id="animalGrid"></div>
+  </section>
 
-    <section class="message-card" aria-label="どうぶつ図鑑からのメッセージ">
-      🌱 新しいコレクションとの出会いを楽しみに、<br>
-      いろいろな知的玩具で遊んでみよう！
-    </section>
+  <section class="shelf" aria-labelledby="dino-title">
+    <div class="shelf-head"><h2 id="dino-title">恐竜図鑑</h2><div class="progress" id="dinoProgress">0 / 20</div></div>
+    <div class="book-grid" id="dinoGrid"></div>
+  </section>
 
-    <p class="notice">
-      図鑑はこのブラウザに保存されます。<br>
-      次回も同じ端末・同じブラウザで遊ぶと、続きから集められます。<br>
-      ブラウザのデータを削除したり、別の端末で開いた場合は引き継がれません。
-    </p>
-  </main>
-
-  <script>
-    (() => {
-      const storageKey = 'intellectualToysAnimalBook.v1';
-      const legacyStorageKeys = [
-        'intellectualToysAnimalBook',
-        'animalBook',
-        'animalCollection',
-        'intellectualToysAnimals'
-      ];
-      const animals = {
-        '001': 'うさぎ',
-        '002': 'きつね',
-        '003': 'ハムスター',
-        '004': 'いぬ',
-        '005': 'ねずみ',
-        '006': 'たぬき',
-        '007': 'りす',
-        '008': 'いぬ',
-        '009': 'パンダ',
-        '010': 'レッサーパンダ',
-        '011': 'コアラ',
-        '012': 'ウォンバット',
-        '013': 'カンガルー',
-        '014': 'クオッカ'
-      };
-      const animalImages = {
-        '001': '../assets/001.png',
-        '002': '../assets/002.png',
-        '003': '../assets/003.png',
-        '004': '../assets/004.png',
-        '005': '../assets/005.png',
-        '006': '../assets/006.png',
-        '007': '../assets/007.png',
-        '008': '../assets/008.png',
-        '009': '../assets/009.png',
-        '010': '../assets/010.png',
-        '011': '../assets/011.png',
-        '012': '../assets/012.png',
-        '013': '../assets/013.png',
-        '014': '../assets/014.png'
-      };
-      const grid = document.getElementById('bookGrid');
-      const progress = document.getElementById('progress');
-
-      function normalizeAnimalId(value) {
-        const id = String(value);
-        return /^\d{1,3}$/.test(id) ? id.padStart(3, '0') : id;
+  <p class="section-lead" style="margin-top:22px;text-align:center">取得記録はこのブラウザに保存されます。同じ端末・同じブラウザで続きから集められます。</p>
+  <footer>数学の扉</footer>
+</main>
+<script src="../js/collection.js"></script>
+<script>
+(() => {
+  const state=window.MathDoorCollection.readState();
+  const knownAnimalImages=new Set(Array.from({length:30},(_,i)=>String(i+1).padStart(3,'0')));
+  function render(gridId,progressId,category,count,imagePrefix){
+    const grid=document.getElementById(gridId);const acquired=new Set(state[category]||[]);
+    let valid=0;
+    for(let i=1;i<=count;i++){
+      const id=String(i).padStart(3,'0');const got=acquired.has(id);if(got) valid++;
+      const cell=document.createElement('div');cell.className='item-cell'+(got?' acquired':'');
+      if(got && category==='animals' && knownAnimalImages.has(id)){
+        const img=document.createElement('img');img.className='item-image';img.src=`../assets/${id}.png`;img.alt=`どうぶつ ${id}`;cell.appendChild(img);
+      }else{
+        const mark=document.createElement('span');mark.className='placeholder';mark.textContent=got?'★':'○';mark.setAttribute('aria-hidden','true');cell.appendChild(mark);
       }
-
-      function normalizeAcquired(value) {
-        if (Array.isArray(value)) return value.map(normalizeAnimalId);
-        if (value && typeof value === 'object') {
-          return Object.keys(value).filter(id => value[id]).map(normalizeAnimalId);
-        }
-        return [];
-      }
-
-      function readStoredIds(key) {
-        try {
-          const raw = localStorage.getItem(key);
-          if (!raw) return [];
-          return normalizeAcquired(JSON.parse(raw));
-        } catch (error) {
-          return [];
-        }
-      }
-
-      function readAcquired() {
-        const ids = new Set(readStoredIds(storageKey));
-        legacyStorageKeys.forEach(key => readStoredIds(key).forEach(id => ids.add(id)));
-        const acquired = [...ids].sort();
-        try {
-          localStorage.setItem(storageKey, JSON.stringify(acquired));
-        } catch (error) {}
-        return acquired;
-      }
-
-      const acquired = new Set(readAcquired());
-      const validAcquiredCount = new Set(
-        readStoredIds(storageKey).filter(id => Object.prototype.hasOwnProperty.call(animals, id))
-      ).size;
-      progress.textContent = `コレクション ${validAcquiredCount} / 100`;
-
-      for (let i = 1; i <= 100; i++) {
-        const id = String(i).padStart(3, '0');
-        const animalName = animals[id];
-        const cell = document.createElement('div');
-        const isAcquired = acquired.has(id) && animalName;
-        cell.className = 'animal-cell' + (isAcquired ? ' acquired' : '');
-        cell.setAttribute('aria-label', isAcquired ? `${id} ${animalName} 取得済み` : `${id} 未取得`);
-
-        const imageSrc = isAcquired ? animalImages[id] : null;
-        const mark = document.createElement(imageSrc ? 'img' : 'span');
-        mark.className = imageSrc ? 'animal-image' : isAcquired ? 'animal' : 'placeholder';
-        if (imageSrc) {
-          mark.src = imageSrc;
-          mark.alt = animalName;
-        } else {
-          mark.textContent = isAcquired ? animalName : '○';
-          mark.setAttribute('aria-hidden', 'true');
-        }
-
-        const number = document.createElement('span');
-        number.className = 'animal-number';
-        number.textContent = id;
-
-        cell.append(mark, number);
-        grid.appendChild(cell);
-      }
-    })();
-  </script>
+      const num=document.createElement('span');num.className='num';num.textContent=id;cell.appendChild(num);grid.appendChild(cell);
+    }
+    document.getElementById(progressId).textContent=`${valid} / ${count}`;
+  }
+  render('animalGrid','animalProgress','animals',50,'animal');
+  render('dinoGrid','dinoProgress','dinosaurs',20,'dinosaur');
+})();
+</script>
 </body>
 </html>

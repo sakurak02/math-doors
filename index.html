@@ -1,503 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HDPEGE2X1P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-HDPEGE2X1P');
-</script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>知的玩具工房</title>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-HDPEGE2X1P');</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>数学の扉</title>
+<meta name="description" content="シニア主婦がAIと一緒に数学を学び直すサイト。5〜10分の小さな扉から、気になる数学の世界を覗いていきます。">
 <link rel="canonical" href="https://sakurak02.github.io/intellectual-toys/">
-
-<style>
-body{
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-    max-width:1000px;
-    margin:auto;
-    padding:20px;
-    background:#fafafa;
-    color:#333;
-    line-height:1.7;
-}
-
-header{
-    text-align:center;
-    margin-bottom:40px;
-}
-
-h1{
-    font-size:2.5rem;
-    margin-bottom:10px;
-}
-
-.subtitle{
-    color:#666;
-}
-
-.counter{
-    font-size:2rem;
-    font-weight:bold;
-    margin:20px 0;
-}
-
-.grid100{
-    display:grid;
-    grid-template-columns:repeat(10,1fr);
-    gap:6px;
-    max-width:620px;
-    margin:18px auto 30px;
-    padding:14px;
-    border:1px solid #e2e2e2;
-    border-radius:10px;
-    background:#f2f2f2;
-}
-
-.cell{
-    aspect-ratio:1;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border:1px solid #d4d4d4;
-    border-radius:5px;
-    background:#e7e7e7;
-    color:#999;
-    font-size:.75rem;
-    font-variant-numeric:tabular-nums;
-    cursor:default;
-    user-select:none;
-}
-
-.cell.completed{
-    border-color:#d49b3d;
-    background:#fff1c9;
-    color:#714b0c;
-    font-weight:bold;
-    text-decoration:none;
-    cursor:pointer;
-    box-shadow:0 2px 5px rgba(128,88,20,.18);
-    transition:background .15s ease,transform .15s ease;
-}
-
-.cell.completed:hover,
-.cell.completed:focus-visible{
-    background:#ffe39a;
-    transform:translateY(-1px);
-}
-
-.cell.completed:focus-visible{
-    outline:3px solid rgba(196,132,29,.35);
-    outline-offset:2px;
-}
-
-.shelf-title{
-    margin:0;
-    text-align:center;
-    font-size:1.1rem;
-    color:#555;
-}
-
-.section{
-    margin-top:50px;
-}
-
-.animal-book-card{
-    max-width:620px;
-    margin:24px auto 0;
-    padding:18px 20px;
-    border:1px solid #e2e2e2;
-    border-radius:10px;
-    background:white;
-    text-align:center;
-    box-shadow:0 3px 10px rgba(128,88,20,.08);
-}
-
-.animal-book-card h2{
-    margin:0 0 8px;
-    font-size:1.25rem;
-}
-
-.animal-book-card p{
-    margin:8px 0;
-}
-
-.animal-book-link{
-    display:inline-block;
-    margin-top:4px;
-    padding:9px 18px;
-    border:1px solid #ddd;
-    border-radius:999px;
-    color:inherit;
-    background:white;
-    font-weight:bold;
-    text-decoration:none;
-    transition:background .15s ease,border-color .15s ease,transform .15s ease;
-}
-
-.animal-book-link:hover,
-.animal-book-link:focus-visible{
-    border-color:#d49b3d;
-    background:#fff1c9;
-    transform:translateY(-1px);
-}
-
-.animal-book-link:focus-visible{
-    outline:3px solid rgba(196,132,29,.35);
-    outline-offset:2px;
-}
-
-.category{
-    margin-bottom:30px;
-}
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:12px;
-}
-
-.card{
-    display:block;
-    border:1px solid #ddd;
-    background:white;
-    padding:12px;
-    border-radius:8px;
-    color:inherit;
-    text-decoration:none;
-}
-
-.card.completed-card{
-    cursor:pointer;
-    transition:border-color .15s ease,box-shadow .15s ease,transform .15s ease;
-}
-
-.card.completed-card:hover,
-.card.completed-card:focus-visible{
-    border-color:#d49b3d;
-    box-shadow:0 4px 12px rgba(128,88,20,.14);
-    transform:translateY(-1px);
-}
-
-.card.completed-card:focus-visible{
-    outline:3px solid rgba(196,132,29,.35);
-    outline-offset:2px;
-}
-
-.card small{
-    color:#666;
-}
-
-footer{
-    text-align:center;
-    margin-top:60px;
-    color:#888;
-}
-
-@media (max-width:600px){
-    body{
-        padding:16px;
-    }
-
-    h1{
-        font-size:2rem;
-    }
-
-    .grid100{
-        grid-template-columns:repeat(5,1fr);
-        gap:7px;
-        padding:12px;
-    }
-
-    .cell{
-        font-size:.8rem;
-    }
-
-    .cards{
-        grid-template-columns:1fr;
-    }
-
-    .card{
-        width:100%;
-    }
-}
-</style>
+<link rel="stylesheet" href="css/site.css">
 </head>
-
 <body>
+<main class="page">
+  <header class="site-header">
+    <h1>数学の扉</h1>
+    <p class="tagline">数学って、こんな世界だったんだ。</p>
+    <div class="intro">
+      <p>シニア主婦の私が、AIと一緒に数学を学び直しています。</p>
+      <p>「微分って何だったっけ？」<br>「フーリエ級数って、結局なに？」<br>そんなところから、一つずつ。</p>
+      <p>ひとつの扉は5〜10分。<br>
+式や図を見ながら最後に小さな問題をひとつ解いて、<br>
+コレクションをGET。</p>
+      <p>全部わからなくても大丈夫。<br>順番どおりじゃなくても大丈夫。</p>
+      <p class="closing">気になった扉から、一緒に数学の世界を覗いてみませんか。</p>
+    </div>
+  </header>
 
-<header>
-<h1>知的玩具工房</h1>
+  <section class="section" aria-labelledby="fields-title">
+    <h2 class="section-title" id="fields-title">20の入口</h2>
+    <p class="section-lead">大まかな道順です。寄り道したり、戻ったりしながら少しずつ開けていきます。</p>
+    <div class="field-grid">
+      <a class="field-card open" href="trigonometry/"><span class="field-number">01</span><span class="field-name">三角関数・波</span><span class="field-status">最初の扉をここから開きます →</span></a>
+      <div class="field-card waiting"><span class="field-number">02</span><span class="field-name">指数・対数</span><span class="field-status">準備中</span></div>
+      <div class="field-card waiting"><span class="field-number">03</span><span class="field-name">数列・級数</span><span class="field-status">準備中</span></div>
+      <div class="field-card waiting"><span class="field-number">04</span><span class="field-name">極限</span><span class="field-status">準備中</span></div>
+      <div class="field-card waiting"><span class="field-number">05</span><span class="field-name">微分</span><span class="field-status">準備中</span></div>
+      <div class="field-card waiting"><span class="field-number">06</span><span class="field-name">微分方程式・力学的な数学</span><span class="field-status">準備中</span></div>
+      <div class="field-card waiting"><span class="field-number">07</span><span class="field-name">積分</span><span class="field-status">準備中</span></div>
+      <div class="field-card waiting"><span class="field-number">08</span><span class="field-name">複素数・複素数平面</span><span class="field-status">準備中</span></div>
+      <div class="field-card waiting"><span class="field-number">09</span><span class="field-name">ベクトル</span><span class="field-status">準備中</span></div>
+      <div class="field-card waiting"><span class="field-number">10</span><span class="field-name">行列</span><span class="field-status">準備中</span></div>
+      <div class="field-card waiting"><span class="field-number">11</span><span class="field-name">線形代数</span><span class="field-status">準備中</span></div>
+      <div class="field-card waiting"><span class="field-number">12</span><span class="field-name">軌跡・曲線・座標</span><span class="field-status">準備中</span></div>
+      <div class="field-card waiting"><span class="field-number">13</span><span class="field-name">組合せ・離散数学</span><span class="field-status">準備中</span></div>
+      <div class="field-card waiting"><span class="field-number">14</span><span class="field-name">数論</span><span class="field-status">準備中</span></div>
+      <div class="field-card waiting"><span class="field-number">15</span><span class="field-name">近似・数値計算</span><span class="field-status">準備中</span></div>
+      <div class="field-card waiting"><span class="field-number">16</span><span class="field-name">確率</span><span class="field-status">準備中</span></div>
+      <div class="field-card waiting"><span class="field-number">17</span><span class="field-name">統計学</span><span class="field-status">準備中</span></div>
+      <div class="field-card waiting"><span class="field-number">18</span><span class="field-name">カオス・フラクタル・不思議な数学</span><span class="field-status">準備中</span></div>
+      <div class="field-card waiting"><span class="field-number">19</span><span class="field-name">抽象数学を覗く</span><span class="field-status">準備中</span></div>
+      <div class="field-card waiting"><span class="field-number">20</span><span class="field-name">情報・データ・現代数学への入口</span><span class="field-status">準備中</span></div>
+    </div>
+  </section>
 
-<p class="subtitle">
-「わからない」を動かしてみる実験室
-</p>
+  <section class="section collection-card" aria-labelledby="collection-title">
+    <h2 class="section-title" id="collection-title">📖 コレクション図鑑</h2>
+    <p>扉の最後のチャレンジに正解すると、コレクションがひとつ増えます。まずは「どうぶつ図鑑」、その次は「恐竜図鑑」へ。</p>
+    <a class="collection-link" href="animal-book/">コレクション図鑑を見る</a>
+  </section>
 
-<div class="counter">
-14 / 100
-</div>
-</header>
+  <section class="section about-card" aria-labelledby="about-title">
+    <h2 class="section-title" id="about-title">このサイトについて</h2>
+    <p>数学を学び直している運営者が、AIや書籍・資料を活用しながら作成しています。内容の正確さにはできる限り注意していますが、誤りや分かりにくい点がありましたら「ご意見・ご要望」フォームからお知らせください。確認のうえ、必要に応じて訂正します。</p>
+    <a class="button-link" href="https://docs.google.com/forms/d/e/1FAIpQLSdDMNP37vNe0P2DGJ-g8AG2vuAKJLnY-Kpj2Z2N6Pct18heug/viewform">ご意見・ご要望</a>
+  </section>
 
-<section aria-labelledby="shelf-title">
-<h2 class="shelf-title" id="shelf-title">作品棚</h2>
-<div class="grid100" id="grid"></div>
-</section>
-
-<section class="animal-book-card" aria-labelledby="animal-book-title">
-<h2 id="animal-book-title">📖 コレクション図鑑</h2>
-<p>
-知的玩具で遊んでチャレンジに正解すると、<br>
-コレクションが少しずつ増えていきます。
-</p>
-<p>いろいろなコレクションを集めてみよう！</p>
-<a class="animal-book-link" href="animal-book/">📖 コレクション図鑑を見る</a>
-</section>
-
-<div class="section">
-
-<div class="category">
-<h2>■ 中学受験算数</h2>
-
-<div class="cards">
-
-<a class="card completed-card" href="toys/001-wasazan/">
-  <strong>#001 和差算</strong><br>
-  <small>01 線分図・面積図</small><br>
-  <small>切ってくらべよう</small><br>
-  <small>中学受験算数</small>
-</a>
-
-<a class="card completed-card" href="toys/002-saatsumezan/">
-  <strong>#002 差集め算</strong><br>
-  <small>01 線分図・面積図</small><br>
-  <small>くらべて わけよう</small><br>
-  <small>中学受験算数</small>
-</a>
-
-<a class="card completed-card" href="toys/003-nenreizan/">
-  <strong>#003 年齢算</strong><br>
-  <small>01 線分図・面積図</small><br>
-  <small>ふたりでのびよう</small><br>
-  <small>中学受験算数</small>
-</a>
-
-<a class="card completed-card" href="toys/004-soutouzan/">
-  <strong>#004 相当算</strong><br>
-  <small>01 線分図・面積図</small><br>
-  <small>けずってみつけよう</small><br>
-  <small>中学受験算数</small>
-</a>
-
-<a class="card completed-card" href="toys/005-baisuuzan/">
-  <strong>#005 倍数算</strong><br>
-  <small>01 線分図・面積図</small><br>
-  <small>そろえてみつけよう</small><br>
-  <small>中学受験算数</small>
-</a>
-
-<a class="card completed-card" href="toys/006-shoukyozan/">
-  <strong>#006 消去算</strong><br>
-  <small>01 線分図・面積図</small><br>
-  <small>けして みつけよう</small><br>
-  <small>中学受験算数</small>
-</a>
-
-<a class="card completed-card" href="toys/007-bunpaizan/">
-  <strong>#007 分配算</strong><br>
-  <small>01 線分図・面積図</small><br>
-  <small>くらべて みつけよう</small><br>
-  <small>中学受験算数</small>
-</a>
-
-<a class="card completed-card" href="toys/008-yaritorizan/">
-  <strong>#008 やりとり算</strong><br>
-  <small>01 線分図・面積図</small><br>
-  <small>うごかしてみつけよう</small><br>
-  <small>中学受験算数</small>
-</a>
-
-<a class="card completed-card" href="toys/009-kafusokuzan/">
-  <strong>#009 過不足算</strong><br>
-  <small>01 線分図・面積図</small><br>
-  <small>ひろさでくらべよう</small><br>
-  <small>中学受験算数</small>
-</a>
-
-<a class="card completed-card" href="toys/010-heikinzan/">
-  <strong>#010 平均算</strong><br>
-  <small>01 線分図・面積図</small><br>
-  <small>へいきんの線をそろえよう</small><br>
-  <small>中学受験算数</small>
-</a>
-
-<a class="card completed-card" href="toys/011-hayasanokihon/">
-  <strong>#011 速さの基本</strong><br>
-  <small>02 速さ</small><br>
-  <small>そろえてくらべよう</small><br>
-  <small>中学受験算数</small>
-</a>
-
-<a class="card completed-card" href="toys/012-khjnokankei/">
-  <strong>#012 距離・速さ・時間の関係</strong><br>
-  <small>02 速さ</small><br>
-  <small>どれをもとめる？</small><br>
-  <small>中学受験算数</small>
-</a>
-
-<a class="card completed-card" href="toys/013-tabibitozandeai/">
-  <strong>#013 旅人算・出会い</strong><br>
-  <small>02 速さ</small><br>
-  <small>ふたりの速さをたそう</small><br>
-  <small>中学受験算数</small>
-</a>
-
-<a class="card completed-card" href="toys/014-tabibitozanoikake/">
-  <strong>#014 旅人算・追いかけ</strong><br>
-  <small>02 速さ</small><br>
-  <small>おいつくまで何分？</small><br>
-  <small>中学受験算数</small>
-</a>
-
-</div>
-</div>
-
-<div class="category">
-<h2>■ 数学概念</h2>
-<p>まだありません</p>
-</div>
-
-<div class="category">
-<h2>■ 高校数学</h2>
-<p>まだありません</p>
-</div>
-
-<div class="category">
-<h2>■ ゲーム</h2>
-<p>まだありません</p>
-</div>
-
-</div>
-
-<footer>
-知的玩具100個プロジェクト
-</footer>
-
-<script>
-const grid=document.getElementById("grid");
-
-const toys=[
-    {
-        id:1,
-        title:"追いつけ！",
-        slug:"001-wasazan",
-        completed:true
-    },
-    {
-        id:2,
-        title:"出会え！",
-        slug:"002-saatsumezan",
-        completed:true
-    },
-    {
-        id:3,
-        title:"折り返せ！",
-        slug:"003-nenreizan",
-        completed:true
-    },
-    {
-        id:4,
-        title:"止まれ！",
-        slug:"004-soutouzan",
-        completed:true
-    },
-    {
-        id:5,
-        title:"倍数算",
-        slug:"005-baisuuzan",
-        completed:true
-    },
-    {
-        id:6,
-        title:"消去算",
-        slug:"006-shoukyozan",
-        completed:true
-    },
-    {
-        id:7,
-        title:"分配算",
-        slug:"007-bunpaizan",
-        completed:true
-    },
-    {
-        id:8,
-        title:"やりとり算",
-        slug:"008-yaritorizan",
-        completed:true
-    },
-    {
-        id:9,
-        title:"過不足算",
-        slug:"009-kafusokuzan",
-        completed:true
-    },
-    {
-        id:10,
-        title:"平均算",
-        slug:"010-heikinzan",
-        completed:true
-    },
-    {
-        id:11,
-        title:"速さの基本",
-        slug:"011-hayasanokihon",
-        completed:true
-    },
-    {
-        id:12,
-        title:"距離・速さ・時間の関係",
-        slug:"012-khjnokankei",
-        completed:true
-    },
-    {
-        id:13,
-        title:"旅人算・出会い",
-        slug:"013-tabibitozandeai",
-        completed:true
-    },
-    {
-        id:14,
-        title:"旅人算・追いかけ",
-        slug:"014-tabibitozanoikake",
-        completed:true
-    }
-];
-
-for(let id=1;id<=100;id++){
-    const toy=toys.find(item=>item.id===id);
-    const number=String(id).padStart(3,"0");
-
-    if(toy?.completed){
-        const link=document.createElement("a");
-        link.className="cell completed";
-        link.href=`toys/${toy.slug}/index.html`;
-        link.textContent=number;
-        link.title=`#${number} ${toy.title}`;
-        link.setAttribute("aria-label",`#${number} ${toy.title}を開く`);
-        grid.appendChild(link);
-        continue;
-    }
-
-    const cell=document.createElement("span");
-    cell.className="cell";
-    cell.textContent=number;
-    cell.setAttribute("aria-label",`#${number} 未完成`);
-    grid.appendChild(cell);
-}
-</script>
-
+  <footer>数学の扉</footer>
+</main>
 </body>
 </html>
