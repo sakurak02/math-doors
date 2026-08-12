@@ -21,7 +21,7 @@ a{color:inherit}
 .site-header{text-align:center;padding:28px 0 20px}
 .site-header h1{margin:0;font-size:clamp(2.2rem,7vw,4rem);letter-spacing:.04em}
 .tagline{margin:10px auto 0;font-size:clamp(1.05rem,2.3vw,1.35rem);font-weight:700}
-.intro{max-width:720px;margin:24px auto 0;padding:22px 24px;border:1px solid var(--line);border-radius:20px;background:white;text-align:left}
+.intro{max-width:620px;margin:24px auto 0;padding:22px 28px;border:1px solid var(--line);border-radius:20px;background:white;text-align:center}
 .intro p{margin:.7em 0}
 .intro .closing{font-weight:800;text-align:center;margin-top:1.2em}
 .section{margin-top:42px}
