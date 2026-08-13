@@ -27,6 +27,7 @@ a{color:inherit}
 .section{margin-top:32px}
 .section-title{margin:0 0 12px;font-size:1.4rem}
 .section-lead{margin:-4px 0 14px;color:var(--muted)}
+.section-heading-row{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin-bottom:12px}.section-heading-row .section-title{flex:0 0 auto;margin:0}.latest-door{min-width:0;color:var(--muted);font-size:.82rem;text-align:right}.latest-door-label{margin-right:.35em}.latest-door a{color:#596670;font-weight:800;text-decoration-thickness:1px;text-underline-offset:3px}.latest-door a:hover,.latest-door a:focus-visible{color:#7b5b20}.latest-door time{margin-left:.45em;font-size:.76rem;white-space:nowrap}
 .field-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px}
 .field-card{display:block;min-height:98px;padding:11px 12px;border:1px solid var(--line);border-radius:12px;background:white;text-decoration:none;transition:transform .15s ease,border-color .15s ease,background .15s ease}
 .field-card.open{background:var(--open);border-color:#d9bb79}
@@ -48,5 +49,6 @@ a{color:inherit}
 .notice{padding:14px 16px;border-left:4px solid var(--accent);background:#fff8e8;border-radius:8px;color:#5d5140}
 footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem;text-align:center}
 @media(max-width:900px){.field-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.door-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.section-heading-row{display:block}.section-heading-row .section-title{margin-bottom:5px}.latest-door{text-align:left;overflow-wrap:anywhere}}
 @media(max-width:600px){.page{width:min(100% - 22px,1040px);padding-top:14px}.site-header{padding-top:14px}.field-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.field-card{min-height:88px;padding:9px 10px}.door-list{grid-template-columns:1fr}.door-card{min-height:0}.collection-card,.about-card{padding:16px}}
 @media(max-width:360px){.field-grid{grid-template-columns:1fr}.field-card{min-height:0}}
