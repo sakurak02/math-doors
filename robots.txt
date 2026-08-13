@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sakurak02.github.io/intellectual-toys/sitemap.xml
+Sitemap: https://sakurak02.github.io/math-doors/sitemap.xml
