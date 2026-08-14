@@ -48,7 +48,17 @@ a{color:inherit}
 .door-card.pending{color:#777;background:#f5f4f0}
 .notice{padding:14px 16px;border-left:4px solid var(--accent);background:#fff8e8;border-radius:8px;color:#5d5140}
 footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem;text-align:center}
+.coming-soon-page{color:#22344a;background:var(--soft)}
+.coming-soon{display:grid;place-items:center;width:min(100% - 40px,780px);min-height:100vh;min-height:100svh;margin:0 auto;padding:56px 0}
+.coming-soon-panel{width:100%;padding:82px 72px 72px;border:1px solid #d4c5a8;border-radius:10px;background:rgba(255,253,248,.86);text-align:center;box-shadow:0 16px 44px rgba(39,49,58,.045)}
+.coming-soon-eyebrow{display:flex;align-items:center;justify-content:center;gap:14px;margin:0 0 14px;color:#9a7a3d;font-size:.84rem;font-weight:700;letter-spacing:.22em}
+.coming-soon-eyebrow::before,.coming-soon-eyebrow::after{content:"";width:36px;height:1px;background:#b89754}
+.coming-soon-panel h1{margin:0;font-size:clamp(2.7rem,7vw,3.85rem);font-weight:700;line-height:1.32;letter-spacing:.08em}
+.coming-soon-divider{width:96px;height:1px;margin:30px auto 38px;background:#b89754}
+.coming-soon-message{margin:0;color:#68737d;font-size:.96rem;letter-spacing:.02em}
+.coming-soon-link{display:inline-block;min-width:238px;margin-top:36px;padding:11px 30px;border:1px solid #a98a4d;border-radius:5px;color:#22344a;background:transparent;font-size:.92rem;font-weight:700;letter-spacing:.06em;text-decoration:none;transition:background .15s ease,border-color .15s ease}
+.coming-soon-link:hover,.coming-soon-link:focus-visible{border-color:#9a7a3d;background:#fff8e8}
 @media(max-width:900px){.field-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.door-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){.section-heading-row{display:block}.section-heading-row .section-title{margin-bottom:5px}.latest-door{text-align:left;overflow-wrap:anywhere}}
-@media(max-width:600px){.page{width:min(100% - 22px,1040px);padding-top:14px}.site-header{padding-top:14px}.field-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.field-card{min-height:88px;padding:9px 10px}.door-list{grid-template-columns:1fr}.door-card{min-height:0}.collection-card,.about-card{padding:16px}.desktop-break{display:none}}
+@media(max-width:600px){.page{width:min(100% - 22px,1040px);padding-top:14px}.site-header{padding-top:14px}.field-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.field-card{min-height:88px;padding:9px 10px}.door-list{grid-template-columns:1fr}.door-card{min-height:0}.collection-card,.about-card{padding:16px}.desktop-break{display:none}.coming-soon{width:min(100% - 24px,780px);padding:20px 0}.coming-soon-panel{padding:44px 20px 40px}.coming-soon-eyebrow{gap:10px;margin-bottom:10px}.coming-soon-eyebrow::before,.coming-soon-eyebrow::after{width:24px}.coming-soon-panel h1{font-size:clamp(2.35rem,12vw,3rem);letter-spacing:.05em}.coming-soon-divider{width:72px;margin:22px auto 28px}.coming-soon-message{font-size:.9rem}.coming-soon-link{min-width:210px;max-width:100%;margin-top:28px;padding:10px 22px}}
 @media(max-width:360px){.field-grid{grid-template-columns:1fr}.field-card{min-height:0}}
